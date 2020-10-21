@@ -21,7 +21,7 @@ import json
 class JSONmsg(db.Model):
     __tablename__ = "jsonmsg"
     journeyId = db.Column(db.String(40), primary_key = True)
-    json = db.Column(db.String(50000))
+    json = db.Column(db.String(5000000))
     def __init__(self, journeyId, json):
         self.journeyId = journeyId
         self.json = str(json)
